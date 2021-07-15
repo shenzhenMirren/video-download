@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.szmirren.controller.IndexController">
+   <children>
+      <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="320.0" text="存放目录:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSelectFile" layoutX="461.0" layoutY="320.0" mnemonicParsing="false" onAction="#onSelectProjectPath" text="2.选择保存目录" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="320.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-default" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnDecodeUrls" layoutX="770.0" layoutY="320.0" mnemonicParsing="false" onAction="#onDecodeAndLoadUrls" text="3.解析下载地址" AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="320.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-default" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnStartDownload" layoutX="914.0" layoutY="317.0" mnemonicParsing="false" onAction="#onStartDownload" text="4.开始下载" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="320.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-default" />
+         </styleClass>
+      </Button>
+      <TableView fx:id="tblProperty" layoutX="20.0" layoutY="320.0" prefHeight="438.0" prefWidth="1004.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="360.0" />
+      <TextArea fx:id="txtUrls" layoutX="34.0" layoutY="30.0" prefHeight="263.0" prefWidth="1004.0" promptText="1.请输入或粘贴要下载的内容" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="txtProjectPath" layoutX="100.0" layoutY="320.0" prefHeight="34.0" prefWidth="355.0" promptText="请输入或选择存放目录,例如:E:/temp-vertx" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="284.0" text="代理信息:" AnchorPane.topAnchor="284.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProxyHost" layoutX="135.0" layoutY="247.0" prefHeight="34.0" prefWidth="355.0" promptText="代理主机地址" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="280.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtProxyPort" layoutX="461.0" layoutY="280.0" prefHeight="34.0" prefWidth="133.0" promptText="端口号" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="280.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDownCount" layoutX="604.0" layoutY="317.0" prefHeight="34.0" prefWidth="156.0" promptText="端口号" text="线程数量,默认10" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <CheckBox fx:id="ckUseProxy" layoutX="604.0" layoutY="283.0" mnemonicParsing="false" selected="true" text="开启代理" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="288.0" />
+   </children>
+</AnchorPane>
